@@ -10,7 +10,7 @@
 
 services:
   php-app:
-    image: php-docker-project
+    # image: php-docker-project
     build:
       context: .
     ports:
