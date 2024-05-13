@@ -17,14 +17,14 @@ jobs:
       - name: Build Docker container
         run: docker compose build
 
-      - name: Log into Docker Hub
-        run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
-
       - name: Show images
         run: docker images
 
-      - name: Tag Docker image
-        run: docker tag php-webapp:latest "${{ secrets.DOCKERHUB_USERNAME }}/php-webapp:latest"
+      # - name: Log into Docker Hub
+      #   run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
-      - name: Push Docker image to Docker Hub
-        run: docker push "${{ secrets.DOCKERHUB_USERNAME }}/php-webapp:latest"
+      # - name: Tag Docker image
+      #   run: docker tag php-webapp:latest "${{ secrets.DOCKERHUB_USERNAME }}/php-webapp:latest"
+
+      # - name: Push Docker image to Docker Hub
+      #   run: docker push "${{ secrets.DOCKERHUB_USERNAME }}/php-webapp:latest"
