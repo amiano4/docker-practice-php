@@ -20,6 +20,9 @@ jobs:
       - name: Log into Docker Hub
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
+      - name: Show images
+        run: docker images
+
       - name: Tag Docker image
         run: docker tag php-webapp:${{ github.sha }} "${{ secrets.DOCKERHUB_USERNAME }}/php-webapp:${{ github.sha }}"
 
