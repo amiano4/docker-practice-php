@@ -21,7 +21,7 @@ jobs:
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
       - name: Tag Docker image
-        run: docker tag php-app:${{ github.sha }} "${{ secrets.DOCKERHUB_USERNAME }}/php-app:${{ github.sha }}"
+        run: docker tag php-webapp:${{ github.sha }} "${{ secrets.DOCKERHUB_USERNAME }}/php-webapp:${{ github.sha }}"
 
       - name: Push Docker image to Docker Hub
-        run: docker push "${{ secrets.DOCKERHUB_USERNAME }}/php-app:${{ github.sha }}"
+        run: docker push "${{ secrets.DOCKERHUB_USERNAME }}/php-webapp:${{ github.sha }}"
