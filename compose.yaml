@@ -10,7 +10,9 @@
 
 services:
   php-app:
-    image: php-webapp
+    # image: php-webapp
+    # container_name: prac
+    # image: imageName
     build:
       context: .
     ports:
@@ -22,9 +24,8 @@ services:
     #     action: exec # Perform exec action on change
     #     command: ["php", "-S", "localhost:8000", "-t", "/var/www/html"]
 
-  mysql:
+  mysql-database:
     image: mysql
-    container_name: mysql
     restart: always # always restart
     environment:
       MYSQL_DATABASE: "test_db" # name of database
