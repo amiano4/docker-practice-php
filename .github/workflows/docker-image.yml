@@ -28,7 +28,7 @@ jobs:
 
       - name: Push PHP application image (Optional check)
         run: |
-          docker images | grep php-web:latest && docker push "${{ secrets.DOCKERHUB_USERNAME }}/php-web:latest"
+          docker images | grep php-web:latest
 
 
       # - name: Build Docker container
