@@ -9,10 +9,7 @@
 # https://github.com/docker/awesome-compose
 
 services:
-  php-app:
-    # image: php-webapp
-    # container_name: prac
-    # image: imageName
+  web:
     build:
       context: .
     ports:
@@ -24,7 +21,7 @@ services:
     #     action: exec # Perform exec action on change
     #     command: ["php", "-S", "localhost:8000", "-t", "/var/www/html"]
 
-  mysql-database:
+  mysql:
     image: mysql
     restart: always # always restart
     environment:

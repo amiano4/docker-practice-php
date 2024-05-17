@@ -2,7 +2,7 @@
 
 try {
 
-  define('DB_HOST', 'mysql-database');
+  define('DB_HOST', 'mysql');
   define('DB_USER', 'test_user');
   define('DB_PASS', 'password');
   define('DB_NAME', 'test_db');
