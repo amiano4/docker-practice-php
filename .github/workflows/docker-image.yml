@@ -24,7 +24,7 @@ jobs:
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
       - name: Tag Docker image
-        run: docker tag php-web:latest "${{ secrets.DOCKERHUB_USERNAME }}/docker-php-app-web:latest"
+        run: docker tag docker-php-app-web:latest "${{ secrets.DOCKERHUB_USERNAME }}/php-web:latest"
 
       - name: Push Docker image to Docker Hub
         run: docker push "${{ secrets.DOCKERHUB_USERNAME }}/php-web:latest"
