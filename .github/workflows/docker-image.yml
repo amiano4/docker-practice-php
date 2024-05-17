@@ -27,9 +27,7 @@ jobs:
         run: docker tag docker-practice-php-web:latest "${{ secrets.DOCKERHUB_USERNAME }}/php-web:latest"
 
       - name: Push PHP application image (Optional check)
-        run: |
-          docker images | grep php-web:latest
-
+        run: docker images 
 
       # - name: Build Docker container
       #   run: docker compose up -d
